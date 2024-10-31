@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo Express y MongoDB</title>
+</head>
+<body>
+    <h1>Hola, Express!</h1>
+    <p>Este es un párrafo en HTML.</p>
+    <form class="formulario" action="agregar" method="post">
+        <input type="text" placeholder="titulo" name="titulo">
+        <input type="text" placeholder="mensaje" name="mensaje">
+        <input type="text" placeholder="fecha" name="fecha">
+        <input type="submit" value="Crear Nota">
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Mensaje</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (notas.length > 0) { %>
+                <% notas.forEach(nota => { %>
+                    <tr>
+                        <td><%= nota.titulo %></td>
+                        <td><%= nota.mensaje %></td>
+                        <td><%= nota.fecha %></td>
+                        <td><a href="/borrar/<%= nota._id %>">Eliminar</a></td>
+                        <td><a href="/Modificar/<%= nota._id %>">Modificar</a></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="3">No hay notas disponibles.</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>
