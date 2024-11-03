@@ -6,7 +6,13 @@ const {Schema} = mongoose
 const url_connect = 'mongodb+srv://matias:admin@cluster0.smmk1.mongodb.net/db_notas'
 
 //realizar la conexión
-mongoose.connect(url_connect, {useNewUrlParser: true, useUnifiedTopology: true});
+//mongoose.connect(url_connect, {useNewUrlParser: true, useUnifiedTopology: true});
+
+const options = {
+    maxPoolSize: 25,
+  }
+//mongoose.connect(url_connect, {useNewUrlParser: true, useUnifiedTopology: true});
+  await mongoose.connect(url_connect, options)
 
 //esquema de la base de datos
 const notaSchema = new Schema({
