@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'parser';
 import notesController from './controller.js';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 dotenv.config();
 const uri = process.env.URL_Mongo; 
@@ -25,8 +26,16 @@ db.once('open', ()=>{
 //Configuración de Express con el middleware:
 const app = express();
 
+//app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:8000',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
 //Configuración del puerto:
-const PORT = process.env.PORT || 8000;
+//const PORT = process.env.PORT || 8000;
+const PORT =  8000;
 app.listen(PORT, '0.0.0.0', ()=>{
     console.log(`Server en ejecución en el puerto ${PORT}`);
 });

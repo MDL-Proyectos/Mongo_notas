@@ -1,6 +1,11 @@
 import express from 'express'
-//import views from './views/index.html'
 import {Notas, verNotas, agregarNota, borrarNota, modificarNota} from './dbContext/dbContext.js'
+
+//import config from './config.json'
+/*import BaseApi from './lib/baseApi.js'
+const baseApi = new BaseApi("")
+baseApi.BaseApi = BaseApi
+*/
 
 
 const app = express()
@@ -54,4 +59,3 @@ app.post('/modificar/:id', async (req, res) => {
         res.status(500).send('Error al modificar la nota');
     }
 })
-

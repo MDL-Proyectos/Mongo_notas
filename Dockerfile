@@ -24,11 +24,11 @@
     
     # Ejecuta el siguiente comando para construir la imagen Docker:
     # docker build -t mongo-notas .
-    #docker build -f C:\Users\pc\source\repos\mongo-notas\Dockerfile -t mongo-notas .
+    #docker build -f C:\Users\pc\source\repos\mongo-notas\Mongo_notas\Dockerfile -t mongo-notas .
     
     # Luego, ejecutar un contenedor a partir de la imagen creada:
     # docker run -p 4000:4000 -d mongo-notas
-    #docker run -p 8000:8000 -d mongo-notas
+    # docker run -p 8000:8000 -d mongo-notas
     # docker run --name mongo-notas -p 8000:8000 -d mongo-notas
 
     #para ver imagen corriendo
