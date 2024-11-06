@@ -28,10 +28,11 @@ const app = express();
 
 //app.use(cors());
 app.use(cors({
-    origin: 'http://localhost:8000',
+    origin: 'http://localhost:3000',
+    //origin: 'http://localhost:8000',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
+    //credentials: true
 }));
 //Configuración del puerto:
 //const PORT = process.env.PORT || 8000;
