@@ -9,7 +9,7 @@ dotenv.config();
 const uri = process.env.URL_Mongo; 
 //Conexión a mongo:
 const URL_Mongo = process.env.URL_Mongo;
-const url_connect = 'mongodb+srv://matias:admin@cluster0.smmk1.mongodb.net/db_notas'
+const url_connect = process.env.URL_Mongo;
 const options = {
     maxPoolSize: 25,
   }
