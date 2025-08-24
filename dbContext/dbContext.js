@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const {Schema} = mongoose
 
 //url para conectar a mongo
-const url_connect = 'mongodb+srv://matias:admin@cluster0.smmk1.mongodb.net/db_notas'
+const url_connect = process.env.URL_CONNECT_MONGO
 
 //realizar la conexión
 //mongoose.connect(url_connect, {useNewUrlParser: true, useUnifiedTopology: true});
