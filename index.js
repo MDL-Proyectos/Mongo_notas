@@ -23,7 +23,6 @@ app.get('/', async(req,res)=> {
     let notas = await verNotas(Notas)
     res.render('index', {notas})
 })
-//mongodb+srv://matias:<admin>@cluster0.smmk1.mongodb.net/
 
 app.post('/agregar', (req, res)=> {
     agregarNota(req, res)
